@@ -1,8 +1,11 @@
 {
   "name": "publish-open-api-spec-to-postman",
-  "version": "v1.1",
+  "version": "1.1.0",
   "description": "See also: [loopDelicious/converter](https://github.com/loopDelicious/converter)",
   "main": "index.js",
+  "scripts": {
+     "build": "ncc build index.js"
+  },
   "dependencies": {
     "@actions/core": "^1.9.0",
     "@actions/github": "^5.0.3",
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/diegosanteri/publish-open-api-spec-to-postman/issues"
   },
-  "homepage": "https://github.com/diegosanteri/publish-open-api-spec-to-postman#readme"
+  "homepage": "https://github.com/diegosanteri/publish-open-api-spec-to-postman#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1"
+  }
 }
