@@ -22,6 +22,10 @@ const convertToPostman = async (openapiData) => {
           !conversionResult.output || 
           conversionResult.output.length == 0 ||
           !conversionResult.output[0].data) {
+              if(err) {
+                return reject(err)
+              }
+              
               if(conversionResult.reason) {
                 return reject('Could not convert', conversionResult.reason);
               }
